@@ -199,6 +199,7 @@ section.home {
 .portfolio {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -224,6 +225,11 @@ section.home {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.portfolio .item:hover .action {
     opacity: 1;
 }
 
@@ -231,6 +237,8 @@ section.home {
     display: inline-block;
     color: #fff;
     text-decoration: none;
+    border: 1px solid #fff;
+    padding: 5px 15px;
 }
 
 @media (max-width: 1069px) {
@@ -259,5 +267,9 @@ section.home {
 @media (max-width: 768px) {
     .services {
         grid-template-columns: 1fr;
+    }
+
+    .services .service {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
     }
 }
